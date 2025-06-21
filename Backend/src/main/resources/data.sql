@@ -1,0 +1,5 @@
+CREATE TABLE test (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    test VARCHAR(255),
+    nome VARCHAR(255)
+);
