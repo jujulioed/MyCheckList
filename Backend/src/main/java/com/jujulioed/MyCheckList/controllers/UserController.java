@@ -1,6 +1,5 @@
 package com.jujulioed.MyCheckList.controllers;
 
-import com.jujulioed.MyCheckList.models.TestModel;
 import com.jujulioed.MyCheckList.models.User;
 import com.jujulioed.MyCheckList.models.dtos.UserDTO;
 import com.jujulioed.MyCheckList.models.dtos.UserUpdateDTO;

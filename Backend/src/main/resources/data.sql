@@ -6,7 +6,7 @@ CREATE TABLE users (
 
 CREATE TABLE tasks (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(127),
+    name VARCHAR(127) NOT NULL,
     description VARCHAR(511),
     user_id BIGINT NOT NULL,
     done BOOL,

@@ -16,12 +16,23 @@ public class TaskRepositoryImp implements TaskRepository {
     private final JdbcClient jdbcClient;
 
     @Override
-    public Optional<Task> findTasksByUserId(Long id) {
+    public Optional<Task> findTaskById(Long taskId) {
         return this.jdbcClient
-                .sql("SELECT FROM tasks WHERE user_id = :id")
-                .param("id", id)
+                .sql("SELECT FROM tasks WHERE id = :task_id")
+                .param("task_id", taskId)
                 .query(Task.class)
                 .optional();
+    }
+
+    @Override
+    public List<Task> findTasksByUserId(int size, int offset, Long id) {
+        return this.jdbcClient
+                .sql("SELECT FROM tasks WHERE user_id = :id LIMIT :size OFFSET :offset")
+                .param("id", id)
+                .param("size", size)
+                .param("offset", offset)
+                .query(Task.class)
+                .list();
     }
 
     @Override

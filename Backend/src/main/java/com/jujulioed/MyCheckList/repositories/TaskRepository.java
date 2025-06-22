@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TaskRepository {
-    Optional<Task> findTasksByUserId(Long id);
+    Optional<Task> findTaskById(Long taskId);
+    List<Task> findTasksByUserId(int size, int offset, Long id);
     Integer save(Task task);
     Integer update(Task task);
     Integer delete(Long id);
