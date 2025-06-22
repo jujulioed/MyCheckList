@@ -1,5 +1,5 @@
-CREATE TABLE test (
+CREATE TABLE users (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    test VARCHAR(255),
-    nome VARCHAR(255)
+    name VARCHAR(255),
+    email VARCHAR(255)
 );
